@@ -18,7 +18,7 @@ jobs:
          version: 9.6.11
          configuration: phpunit.xml
          php_version: 8.1.2
-         php_extensions: gd sqlite3 dom xml
+         php_extensions: gd sqlite3 dom xml xdebug
          coverage_cobertura: coverage.cobertura.xml
 
      - name: Code Coverage Summary
