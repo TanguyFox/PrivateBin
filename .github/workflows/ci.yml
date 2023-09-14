@@ -21,7 +21,7 @@ jobs:
          php_extensions: gd sqlite3 dom xml
          coverage_cobertura: code_coverage.xml
 
-    - name: Code Coverage Summary
-      uses: irongut/CodeCoverageSummary@v1.3.0
-      with:
+      - name: Code Coverage Summary
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
           filename: code_coverage.xml
