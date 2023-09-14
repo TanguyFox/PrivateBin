@@ -15,5 +15,5 @@ jobs:
        env:
          TEST_NAME: TEST
        with:
-         configuration: ../../phpunit.xml
+         configuration: phpunit.xml
          php_version: 8.1.2
