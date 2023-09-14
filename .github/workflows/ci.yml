@@ -16,4 +16,4 @@ jobs:
          TEST_NAME: TEST
        with:
          configuration: ../../phpunit.xml
-         php-version: 8.1.2
+         php_version: 8.1.2
