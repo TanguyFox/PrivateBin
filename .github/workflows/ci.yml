@@ -26,14 +26,14 @@ jobs:
        uses: irongut/CodeCoverageSummary@v1.3.0
        with:
          filename: coverage.xml
-	 badge: true
-	 fail_below_min: true
-	 format: markdown
-	 hide_branch_rate: false
-	 hide_branch_complexity: true
-	 indicators: true
-	 output: console
-	 threshold: "50 75"
+         badge: true
+         fail_below_min: true
+         format: markdown
+         hide_branch_rate: false
+         hide_branch_complexity: true
+         indicators: true
+         output: console
+         threshold: "50 75"
 
      - name : "Add Mardown"
        run : echo 'Done' >> $GITHUB_STEP_SUMMARY
