@@ -20,4 +20,4 @@ jobs:
          configuration: phpunit.xml
          php_version: 8.1.2
          php_extensions: gd sqlite3 dom xml xdebug mbstring
-	 coverage_cobertura: "test/coverage.xml"
+         coverage_cobertura: "test/coverage.xml"
