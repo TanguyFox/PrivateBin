@@ -14,9 +14,8 @@ jobs:
        uses: php-actions/phpunit@master
        env:
          TEST_NAME: TEST
-         XDEBUG_MODE: coverage
        with:
          version: 9.6.11
          configuration: phpunit.xml
          php_version: 8.1.2
-         php_extensions: gd sqlite3 dom xml xdebug mbstring
+         php_extensions: gd sqlite3 dom xml xdebug
