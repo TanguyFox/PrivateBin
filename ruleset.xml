@@ -7,8 +7,6 @@
 
     <description>Custom PHPMD rule set</description>
 
-    <ini name="memory_limit" value="512M"/>
-
     <!-- Import several built-in rulesets -->
     <rule ref="rulesets/cleancode.xml"/>
     <rule ref="rulesets/codesize.xml"/>
