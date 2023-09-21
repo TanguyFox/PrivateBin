@@ -41,6 +41,6 @@ jobs:
      - name : "PHP Code Sniffer"
        uses : php-actions/phpcs@v1
        with:
-         php-version: 8.1.2
+         php_version: 8.1.2
          path : lib/
          standard: phpcs.xml
