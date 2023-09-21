@@ -23,7 +23,7 @@ jobs:
       uses: php-actions/phpcs@v1
       with:
         php_version: 8.1
-        path: lib/
+        path: ./
         standard: phpcs.xml
       continue-on-error: true
 
@@ -31,7 +31,7 @@ jobs:
       uses: php-actions/phpmd@v1
       with:
         php_version: 8.1
-        path: lib/
+        path: ./
         output: text
         ruleset: ruleset.xml
       continue-on-error: true
