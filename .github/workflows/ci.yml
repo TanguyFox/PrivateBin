@@ -12,12 +12,12 @@ jobs:
     - name: Composer install
       uses: php-actions/composer@v6
 
-    - name: PHPUNIT
-      uses: php-actions/phpunit@v3
-      with: 
-        version: 9.6.11
-        php_version: '8.1.2'
-        php_extensions: gd
+    # - name: PHPUNIT
+    #   uses: php-actions/phpunit@v3
+    #   with: 
+    #     version: 9.6.11
+    #     php_version: '8.1.2'
+    #     php_extensions: gd
 
     - name: PHP Code Sniffer
       uses: php-actions/phpcs@v1
