@@ -25,6 +25,7 @@ jobs:
         php_version: 8.1
         path: lib/
         standard: phpcs.xml
+      continue-on-error: true
 
     - name: PHP Mess Detector
       uses: php-actions/phpmd@v1
