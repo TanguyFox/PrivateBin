@@ -26,11 +26,11 @@ jobs:
         path: lib/
         standard: phpcs.xml
 
-    # - name: PHP Mess Detector
-    #   uses: php-actions/phpmd@v1
-    #   with:
-    #     php_version: 8.1
-    #     path: lib/
-    #     output: text
-    #     ruleset: test/phpmd/ruleset.xml
+    - name: PHP Mess Detector
+      uses: php-actions/phpmd@v1
+      with:
+        php_version: 8.1
+        path: lib/
+        output: text
+        ruleset: ruleset.xml
     
