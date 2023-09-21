@@ -23,7 +23,7 @@ jobs:
       uses: php-actions/phpcs@v1
       with:
         php_version: 8.1
-        path: ./
+        path: lib/
         standard: phpcs.xml
 
     # - name: PHP Mess Detector
