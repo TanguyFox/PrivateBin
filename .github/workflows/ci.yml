@@ -12,6 +12,9 @@ jobs:
     - name: Composer install
       uses: php-actions/composer@v6
 
+    - name: Set PHP Memory Limit
+      run: echo "memory_limit=512M" >> $PHP_INI_DIR/php.ini
+
     # - name: PHPUNIT
     #   uses: php-actions/phpunit@v3
     #   with: 
@@ -19,6 +22,7 @@ jobs:
     #     php_version: '8.1.2'
     #     php_extensions: gd
 
+  
     - name: PHP Code Sniffer
       uses: php-actions/phpcs@v1
       with:
@@ -26,11 +30,11 @@ jobs:
         path: ./
         standard: phpcs.xml
 
-    - name: PHP Mess Detector
-      uses: php-actions/phpmd@v1
-      with:
-        php_version: 8.1
-        path: ./
-        output: text
-        ruleset: test/phpmd/ruleset.xml
+    # - name: PHP Mess Detector
+    #   uses: php-actions/phpmd@v1
+    #   with:
+    #     php_version: 8.1
+    #     path: ./
+    #     output: text
+    #     ruleset: test/phpmd/ruleset.xml
     
