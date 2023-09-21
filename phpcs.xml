@@ -8,6 +8,8 @@
     <file>tst/</file>
     <file>index.php</file>
 
+    <ini name="memory_limit" value="512M"/>
+
     <!-- 2.1. PHP Tags -->
 
     <!-- PHP code MUST use the long <?php ?> tags or the short-echo <?= ?> tags; it MUST NOT use the other tag variations. -->
