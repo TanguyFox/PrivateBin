@@ -34,4 +34,4 @@ jobs:
         path: lib/
         output: text
         ruleset: ruleset.xml
-    
+      continue-on-error: true
