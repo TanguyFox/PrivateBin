@@ -7,13 +7,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Adding markdown
-      run: echo '###TTTTTEST! 🔒' >> $GITHUB_STEP_SUMMARY
     - uses: actions/checkout@v3
-    - uses: php-actions/composer@v6
-    - uses: php-actions/phpunit@v3
+
+    - name: Composer install
+      uses: php-actions/composer@v6
+
+    - name: PHPUNIT
+      uses: php-actions/phpunit@v3
       with: 
         version: 9.6.11
         php_version: '8.1.2'
         php_extensions: gd
-        args: --coverage-text
+
+    - name: PHP Code Sniffer
+      uses: php-actions/phpcs@v1
+      with:
+        php_version: 8.1
+        path: src/
+        standard: phpcs.xml
+
+    - name: PHP Mess Detector
+      uses: php-actions/phpmd@v1
+      with:
+        php_version: 8.1
+        path: src/
+        output: text
+        ruleset: test/phpmd/ruleset.xml
+    
