@@ -30,10 +30,10 @@ jobs:
          fail_below_min: true
          format: markdown
          hide_branch_rate: false
-         hide_branch_complexity: true
+         hide__complexity: true
          indicators: true
-         output: console
-         threshold: "50 75"
+         output: file
+         thresholds: "50 75"
 
      - name : "Add Mardown"
-       run : echo 'Done' >> $GITHUB_STEP_SUMMARY
+       run : cat coverage.xml >> $GITHUB_STEP_SUMMARY
