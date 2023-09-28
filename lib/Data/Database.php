@@ -33,7 +33,7 @@ class Database extends AbstractData {
      *    @var PDO
      */
      
-    private $db;
+    private $_db;
 
     /**
      * Table prefix
@@ -41,7 +41,7 @@ class Database extends AbstractData {
      * @access private
      *    @var string
      */
-    private $prefix = '';
+    private $_prefix = '';
 
     /**
      * Database type
@@ -49,7 +49,7 @@ class Database extends AbstractData {
      * @access private
      *    @var string
      */
-    private $type = '';
+    private $_type = '';
 
     /**
      * Instantiates a new Database data backend
