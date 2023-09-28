@@ -2,12 +2,13 @@
 /**
  * PrivateBin
  *
- * a zero-knowledge paste bin
+ * A zero-knowledge paste bin
  *
- * @link      https://github.com/PrivateBin/PrivateBin
  * @copyright 2012 Sébastien SAUVAGE (sebsauvage.net)
+ * @link      https://github.com/PrivateBin/PrivateBin
  * @license   https://www.opensource.org/licenses/zlib-license.php The zlib/libpng License
  * @version   1.5.1
+ * @author    Sébastien Sauvage
  */
 
 namespace PrivateBin\Data;
@@ -23,34 +24,35 @@ use PrivateBin\Json;
  *
  * Model for database access, implemented as a singleton.
  */
-class Database extends AbstractData
-{
-    /**
-     * instance of database connection
-     *
-     * @access private
-     * @var PDO
-     */
-    private $_db;
+class Database extends AbstractData {
 
     /**
-     * table prefix
+     * Instance of database connection
      *
      * @access private
-     * @var string
+     *    @var PDO
      */
-    private $_prefix = '';
+     
+    private $db;
 
     /**
-     * database type
+     * Table prefix
      *
      * @access private
-     * @var string
+     *    @var string
      */
-    private $_type = '';
+    private $prefix = '';
 
     /**
-     * instantiates a new Database data backend
+     * Database type
+     *
+     * @access private
+     *    @var string
+     */
+    private $type = '';
+
+    /**
+     * Instantiates a new Database data backend
      *
      * @access public
      * @param  array $options
