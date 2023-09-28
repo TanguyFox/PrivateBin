@@ -50,6 +50,6 @@ jobs:
        uses : php-actions/phpmd@v1
        with :
        	 php_version: 8.1
-	 path : lib/
-	 output: text
-	 ruleset : phpmd_ruleset.xml
+         path : lib/
+         output: text
+         ruleset : phpmd_ruleset.xml
