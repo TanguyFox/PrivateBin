@@ -19,19 +19,24 @@ jobs:
     #     php_version: '8.1.2'
     #     php_extensions: gd
 
-    - name: PHP Code Sniffer
-      uses: php-actions/phpcs@v1
-      with:
-        php_version: 8.1
-        path: lib/
-        standard: phpcs.xml
-      continue-on-error: true
+    # - name: PHP Code Sniffer
+    #   uses: php-actions/phpcs@v1
+    #   with:
+    #     php_version: 8.1
+    #     path: lib/
+    #     standard: phpcs.xml
+    #   continue-on-error: true
 
-    - name: PHP Mess Detector
-      uses: php-actions/phpmd@v1
-      with:
-        php_version: 8.1
+    # - name: PHP Mess Detector
+    #   uses: php-actions/phpmd@v1
+    #   with:
+    #     php_version: 8.1
+    #     path: lib/
+    #     output: text
+    #     ruleset: ruleset.xml
+    #   continue-on-error: true
+
+    - name: Php Static Aanalysis
+      uses: php-actions/phpstan@v3
+      with: 
         path: lib/
-        output: text
-        ruleset: ruleset.xml
-      continue-on-error: true
