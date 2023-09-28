@@ -244,8 +244,10 @@ class Controller
                     return;
                 }
                 $this->_return_message(0, $comment->getId());
+                return;
             } else {
                 $this->_return_message(1, I18n::_('Invalid data.'));
+                return;
             }
         }
         // The user posts a standard paste.
