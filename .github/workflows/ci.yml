@@ -44,3 +44,4 @@ jobs:
          php_version: 8.1.2
          path : lib/
          standard: phpcs.xml
+         severity : 100
