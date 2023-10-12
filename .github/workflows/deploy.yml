@@ -1,0 +1,21 @@
+name: DEPLOY
+
+on: [push]
+
+jobs: 
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Set up SSH agent
+              uses: webfactory/ssh-agent@v0.7.0
+              with:
+                ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_XIN }}
+
+            - name: Update 
+              run:
+                scp -r ./ ubuntu@ec2-35-180-139-5.eu-west-3.compute.amazonaws.com:/var/www/html/PrivateBin/
+
+
+
