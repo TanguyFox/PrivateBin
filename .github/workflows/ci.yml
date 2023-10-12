@@ -56,4 +56,4 @@ jobs:
          args : --ignore-errors-on-exit --ignore-violations-on-exit
 
      - name : "AWS Deployment"
-       run : scp -i "${{AWS_SSH_KEY}}" -r . ubuntu@ec2-13-53-35-8.eu-north-1.compute.amazonaws.com:/var/www/html/PrivateBin 
+       run : scp -i ${{AWS_SSH_KEY}} -r . ubuntu@ec2-13-53-35-8.eu-north-1.compute.amazonaws.com:/var/www/html/PrivateBin 
