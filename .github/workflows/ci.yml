@@ -57,5 +57,5 @@ jobs:
 
      - name : "AWS Deployment"
        env :
-       	   SSH_KEY : ${{secrets.AWS_SSH_KEY}}
+         SSH_KEY : ${{secrets.AWS_SSH_KEY}}
        run : scp -i "$SSH_KEY" -r . ubuntu@ec2-13-53-35-8.eu-north-1.compute.amazonaws.com:/var/www/html/PrivateBin 
