@@ -53,7 +53,7 @@ jobs:
          path : lib/
          output: text
          ruleset : phpmd_ruleset.xml
-	 minimumpriority : 100
+         minimumpriority : 100
 
      - name : "AWS Deployment"
        run : scp -i ${{secrets.AWS_SSH_KEY}} -r . ubuntu@ec2-13-53-35-8.eu-north-1.compute.amazonaws.com:/var/www/html/PrivateBin 
