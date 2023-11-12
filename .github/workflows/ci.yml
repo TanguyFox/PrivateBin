@@ -56,6 +56,10 @@ jobs:
          args : --ignore-errors-on-exit --ignore-violations-on-exit
 
      - name : "AWS Deployment"
-       env :
-         SSH_KEY : ${{secrets.AWS_SSH_KEY}}
-       run : scp -i "$SSH_KEY" -r . ubuntu@ec2-13-53-35-8.eu-north-1.compute.amazonaws.com:/var/www/html/PrivateBin 
+       uses : appleboy/scp-action@v.0.1.4
+       with :
+         host : ${{ secrets.REMOTE_HOST }}
+         username : ${{ secrets.REMOTE_USERNAME }}
+         key : ${{ secrets.AWS_SSH_KEY }}
+         source : "../../*"
+         target : /var/www/html/PrivateBin
