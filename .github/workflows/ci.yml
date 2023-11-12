@@ -61,5 +61,6 @@ jobs:
          host : ${{ secrets.REMOTE_HOST }}
          username : ${{ secrets.REMOTE_USERNAME }}
          key : ${{ secrets.AWS_SSH_KEY }}
+         port : 22
          source : "."
-         target : /var/www/html/PrivateBin
+         target : "/var/www/html/PrivateBin"
