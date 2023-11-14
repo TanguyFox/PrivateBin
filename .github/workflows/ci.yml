@@ -24,7 +24,7 @@ jobs:
 
      - name : PHP Static Analysis
        uses : php-actions/phpstan@v3
-        with :
+       with :
          path : lib/ tst/
          php_version: 8.1.2
          php_extensions: gd sqlite3 dom xml xdebug
