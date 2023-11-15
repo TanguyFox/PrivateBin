@@ -1,0 +1,6 @@
+parameters:
+	paths:
+		- src
+		- tests
+	excludePaths:
+		-lib/Controller.php

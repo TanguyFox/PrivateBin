@@ -1,0 +1,4 @@
+parameters:
+	paths:
+		- lib
+	excludePaths : lib/Controller.php
