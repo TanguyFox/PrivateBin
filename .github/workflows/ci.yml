@@ -16,7 +16,7 @@ jobs:
          php_version: 8.1.2
          php_extensions: gd sqlite3 dom xml xdebug
          error_format : github
-         configuration : stan_config.neon
+         configuration : ./stan_config.neon
          level : 0
 
      - name: PHPUnit Tests
