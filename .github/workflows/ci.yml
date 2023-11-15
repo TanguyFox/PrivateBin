@@ -68,7 +68,7 @@ jobs:
        uses : tj-actions/changed-files@v35
        with :
          since_last_remote_commit: true
-	 separator: ","
+         separator: ","
 
      - name : "AWS Deployment"
        uses : appleboy/scp-action@v0.1.4
