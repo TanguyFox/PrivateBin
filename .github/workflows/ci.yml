@@ -63,6 +63,13 @@ jobs:
          ruleset : phpmd_ruleset.xml
          args : --ignore-errors-on-exit --ignore-violations-on-exit
 
+     - name : "Get changed files"
+       id : changed-files
+       uses : tj-actions/changed-files@v35
+       with :
+         since_last_remote_commit: true
+	 separator: ","
+
      - name : "AWS Deployment"
        uses : appleboy/scp-action@v0.1.4
        with :
@@ -70,5 +77,5 @@ jobs:
          username : ${{ secrets.REMOTE_USERNAME }}
          key : ${{ secrets.AWS_SSH_KEY }}
          port : 22
-         source : "."
+         source : ${{ steps.changed-files.outputs.all_changed_files }}
          target : /var/www/html/
