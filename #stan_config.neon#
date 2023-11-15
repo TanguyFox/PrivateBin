@@ -1,5 +1,0 @@
-parameters:
-    level: 0
-    paths:
-        - lib
-    excludePaths : lib/Controller.php
